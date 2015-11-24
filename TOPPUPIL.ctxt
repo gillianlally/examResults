@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=TOPPUPIL()
-comment1.params=dataItems
-comment1.target=void\ processPUPIL(java.lang.String)
+comment1.params=
+comment1.target=void\ processPUPIL()
 comment2.params=
 comment2.target=void\ setUppupilList()
 comment3.params=
