@@ -36,4 +36,14 @@ public class PUPIL
         memberData = memberData.concat(Integer.toString(mark));
         return memberData;
     }
+
+    public int getMark ()
+    {
+        return mark ;
+    }
+    
+    public void displaydetails () 
+    { 
+     System.out.print("Member: " + fName + " " + sName ) ;
+    }
 }
