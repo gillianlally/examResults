@@ -42,8 +42,5 @@ public class PUPIL
         return mark ;
     }
     
-    public void displaydetails () 
-    { 
-     System.out.print("Member: " + fName + " " + sName ) ;
-    }
+   
 }
