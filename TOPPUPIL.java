@@ -15,15 +15,26 @@ public class TOPPUPIL
     }
 
     //top level algorithm 
-    public void processPUPILS () 
+    public void processPUPILS () throws IOException
     {
         setUppupilList () ; 
         counttopMark () ; 
     }
 
-    private void setUppupilList () 
+    private void setUppupilList () throws IOException 
     {
-        //placeholder
+        //first user message
+        System.out.println("Feeback of marks" ) ;
+        System.out.println("** Preparing to read data file.") ;
+        
+        // read file, fetch data as String array containing the rows
+        String[] datarows = examDataFile.readCSVtable () ;
+        
+        //calculate the number of member rows, skip headings
+        noOfPUPILS = datarows.length - 1 ;
+        
+        // update user with number of rows with membership details
+        System.out.println ("** " + noOfPUPILS +  " rows read . /n/n") ;
     }
 
     public void counttopMark () 
