@@ -7,11 +7,21 @@ public class TOPPUPIL
     private PUPIL pupilList [] ;
     //number of members to be calculated after reading file
     int noOfPUPILS ; 
+    int topMark ; 
+
     FILEREADCSV examDataFile ;
 
-    public TOPPUPIL() 
+    int maxDataPosition ; 
+
+    String fileContent = "" ; 
+    
+    FILEWRITECSV resultsFile ;
+    public TOPPUPIL() throws IOException
     {  
         examDataFile = new FILEREADCSV () ; 
+        resultsFile = new FILEWRITECSV() ; 
+        topMark = 0 ;
+        noOfPUPILS = 49;
     }
 
     //top level algorithm 
@@ -49,13 +59,36 @@ public class TOPPUPIL
 
     }
 
-    public void counttopMark () 
+    public void counttopMark () throws IOException
     {
-        // placeholder
+        String fileContent = "" ;
+        System.out.println( "A report of the pupil with the top mark\n") ;
+        int maxDataPosition = 0 ;
+        
+        for (int i= 0; i< noOfPUPILS; i++) {
+
+            //compare current value with best value
+            if (pupilList[i].getMark() > topMark) {
+                // update the position of the best value
+                topMark = pupilList[i].getMark() ;
+                maxDataPosition = i;
+                fileContent = fileContent.concat(pupilList[i].writeDetails()) ; 
+
+            }
+        }
+        System.out.println( "\n Top mark is: " + topMark) ;
+        System.out.println( "which belongs to: " + maxDataPosition) ;
+        System.out.println () ;     
+        System.out.println( "** Preparing to write data file") ; 
+        resultsFile.writeCSVtable(fileContent) ;
+        System.out.println( "** File written and closed.") ; 
     }
+
+   
 }
 
 // member = pupil
 //club = toppupil
 //bmi = topmark
 //bmiFile = examDataFile 
+

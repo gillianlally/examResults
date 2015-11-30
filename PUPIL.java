@@ -41,6 +41,14 @@ public class PUPIL
     {
         return mark ;
     }
-    
-   
+
+    public void displayDetails () 
+    {
+
+        System.out.print("Pupil: " + fName + " " + sName);
+        System.out.print(",  Mark is ");
+        System.out.print (mark);
+        System.out.println();
+    }
+
 }
