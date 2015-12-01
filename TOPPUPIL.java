@@ -77,7 +77,7 @@ public class TOPPUPIL
             }
         }
         System.out.println( "\n Top mark is: " + topMark) ;
-        System.out.println( "which belongs to: " + maxDataPosition) ;
+        System.out.println( "which belongs to: " + pupilList[maxDataPosition].getfName() + " " + pupilList[maxDataPosition].getsName() ) ;
         System.out.println () ;     
         System.out.println( "** Preparing to write data file") ; 
         resultsFile.writeCSVtable(fileContent) ;

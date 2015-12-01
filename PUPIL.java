@@ -42,6 +42,16 @@ public class PUPIL
         return mark ;
     }
 
+    public String getfName ()
+    {
+        return fName ;
+    }
+    
+    public String getsName () 
+    {
+        return sName ;
+    }
+   
     public void displayDetails () 
     {
 
