@@ -72,10 +72,11 @@ public class TOPPUPIL
                 // update the position of the best value
                 topMark = pupilList[i].getMark() ;
                 maxDataPosition = i;
-                fileContent = fileContent.concat(pupilList[i].writeDetails()) ; 
+                
 
             }
         }
+        fileContent = fileContent.concat(pupilList[maxDataPosition].writeDetails()) ; 
         System.out.println( "\n Top mark is: " + topMark) ;
         System.out.println( "which belongs to: " + pupilList[maxDataPosition].getfName() + " " + pupilList[maxDataPosition].getsName() ) ;
         System.out.println () ;     
